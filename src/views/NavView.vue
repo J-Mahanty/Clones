@@ -26,6 +26,7 @@ import { RouterView } from 'vue-router'
 
 <style lang="scss" scoped>
 .wrapper {
+  max-width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 28px;
   display: flex;
@@ -56,6 +57,11 @@ import { RouterView } from 'vue-router'
       font-size: 20px;
       line-height: 2px;
       margin: 0 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: #c5bdbd;
+      }
     }
   }
 }
