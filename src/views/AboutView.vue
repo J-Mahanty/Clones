@@ -1,3 +1,7 @@
-<template></template>
+<script setup lang="ts"></script>
 
-<style></style>
+<template>
+  <main>
+    <h1>In the About page</h1>
+  </main>
+</template>

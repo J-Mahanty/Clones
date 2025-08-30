@@ -2,6 +2,6 @@
 
 <template>
   <main>
-    <h1>In the home page</h1>
+    <h1>In the Support page</h1>
   </main>
 </template>
