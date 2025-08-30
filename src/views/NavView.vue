@@ -1,20 +1,62 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about"> About</RouterLink>
-        <RouterLink to="/portfolio">Portfolio</RouterLink>
-        <RouterLink to="/writing">Writing</RouterLink>
-        <RouterLink to="/support">Support</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <div class="logo">
+          <h1>DarkSide</h1>
+        </div>
+        <div class="links">
+          <p @click="$router.push('home')">Home</p>
+          <p @click="$router.push('about')">About</p>
+          <p @click="$router.push('portfolio')">Portfolio</p>
+          <p @click="$router.push('writing')">Writing</p>
+          <p @click="$router.push('support')">Support</p>
+          <p @click="$router.push('contact')">Contact</p>
+        </div>
       </nav>
     </div>
   </header>
 
   <RouterView />
 </template>
+
+<style lang="scss" scoped>
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 28px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+
+  .logo {
+    position: absolute;
+    left: 10;
+    display: flex;
+
+    h1 {
+      font-size: 20px;
+      line-height: 2px;
+    }
+  }
+
+  .links {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-size: 20px;
+      line-height: 2px;
+      margin: 0 10px;
+    }
+  }
+}
+</style>
