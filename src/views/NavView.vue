@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router'
 <template>
   <header>
     <div class="wrapper">
-      <nav>
+      <nav class="navbar">
         <div class="logo">
           <h1>DarkSide</h1>
         </div>
@@ -26,40 +26,46 @@ import { RouterView } from 'vue-router'
 <style lang="scss" scoped>
 .wrapper {
   max-width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 28px;
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  justify-content: space-between;
-  color: white;
+  width: 2000px;
+  position: fixed;
+  background-color: rgba(250, 250, 250, 0.1);
 
-  .logo {
-    position: absolute;
-    left: 10;
+  .navbar {
+    max-width: 100%;
+    padding: 28px;
     display: flex;
-
-    h1 {
-      font-size: 20px;
-      line-height: 2px;
-    }
-  }
-
-  .links {
-    position: absolute;
-    right: 0;
-    display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
+    color: white;
 
-    p {
-      font-size: 20px;
-      line-height: 2px;
-      margin: 0 10px;
-      cursor: pointer;
+    .logo {
+      position: absolute;
+      left: 10;
+      display: flex;
 
-      &:hover {
-        color: #c5bdbd;
+      h1 {
+        font-size: 20px;
+        line-height: 2px;
+      }
+    }
+
+    .links {
+      position: absolute;
+      right: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      p {
+        font-size: 20px;
+        line-height: 2px;
+        margin: 0 10px;
+        cursor: pointer;
+
+        &:hover {
+          color: #c5bdbd;
+        }
       }
     }
   }
