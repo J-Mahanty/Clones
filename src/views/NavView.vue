@@ -13,7 +13,6 @@ import { RouterView } from 'vue-router'
           <p @click="$router.push('home')">Home</p>
           <p @click="$router.push('about')">About</p>
           <p @click="$router.push('portfolio')">Portfolio</p>
-          <p @click="$router.push('writing')">Writing</p>
           <p @click="$router.push('support')">Support</p>
           <p @click="$router.push('contact')">Contact</p>
         </div>

@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
 import PortfolioView from '@/views/PortfolioView.vue'
-import WritingView from '@/views/WritingView.vue'
 import SupportView from '@/views/SupportView.vue'
 import ContactView from '@/views/ContactView.vue'
 
@@ -23,11 +22,6 @@ const router = createRouter({
       path: '/portfolio',
       name: 'portfolio',
       component: PortfolioView,
-    },
-    {
-      path: '/writing',
-      name: 'writing',
-      component: WritingView,
     },
     {
       path: '/support',
