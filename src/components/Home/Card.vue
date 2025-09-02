@@ -1,36 +1,11 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="wrapper">
-    <div class="image-wrapper">
-      <img src="../../assets/HomeImages/sample.jpeg" alt="Programming" />
-      <h4>Sub-details</h4>
-      <h3>Details</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor eros vitae
-        hendrerit ultrices. Aliquam diam felis, faucibus non libero quis, commodo sagittis libero.
-      </p>
+    <div v-for="card in cards" :key="card.id" class="image-wrapper">
+      <img :src="card.image" alt="Programming" />
+      <h4>{{ card.subtitle }}</h4>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.text }}</p>
     </div>
-
-    <!-- <div class="image-wrapper">
-      <img src="../../assets/HomeImages/sample.jpeg" alt="Programming" />
-      <h4>Sub-details</h4>
-      <h3>Details</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor eros vitae
-        hendrerit ultrices. Aliquam diam felis, faucibus non libero quis, commodo sagittis libero.
-      </p>
-    </div>
-
-    <div class="image-wrapper">
-      <img src="../../assets/HomeImages/sample.jpeg" alt="Programming" />
-      <h4>Sub-details</h4>
-      <h3>Details</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor eros vitae
-        hendrerit ultrices. Aliquam diam felis, faucibus non libero quis, commodo sagittis libero.
-      </p>
-    </div> -->
   </div>
 </template>
 
@@ -76,3 +51,35 @@
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      cards: [
+        {
+          id: 1,
+          image: '../../assets/HomeImages/sample.jpeg',
+          title: 'Language',
+          subtitle: 'language used for',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor eros vitae hendrerit ultrices. Aliquam diam felis, faucibus non libero quis, commodo sagittis libero. ',
+        },
+        {
+          id: 2,
+          image: '../../assets/HomeImages/sample.jpeg',
+          title: 'Language',
+          subtitle: 'language used for',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor eros vitae hendrerit ultrices. Aliquam diam felis, faucibus non libero quis, commodo sagittis libero. ',
+        },
+        {
+          id: 3,
+          image: '../../assets/HomeImages/sample.jpeg',
+          title: 'Language',
+          subtitle: 'language used for',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor eros vitae hendrerit ultrices. Aliquam diam felis, faucibus non libero quis, commodo sagittis libero. ',
+        },
+      ],
+    }
+  },
+}
+</script>
